@@ -2,10 +2,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-    entry: "./src/app.js",
+    entry: "./builder/src/app.js",
     output: {
-        path: path.resolve(__dirname, ".."),
-        filename: "bundle.js"
+        path: path.resolve(__dirname, "..", ".."),
+        filename: "bundle/app.js"
     },
     module: {
         rules: [
@@ -24,7 +24,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.html",
+            template: "./builder/src/index.html",
             filename: "index.html"
         })
     ]
