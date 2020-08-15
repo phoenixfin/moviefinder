@@ -1,14 +1,14 @@
-import '../component/club-list.js';
+import '../component/movie-shelf.js';
 import '../component/search-bar.js';
-import DataSource from '../data/data-source.js';
+import MovieFinder from '../data/movie-finder.js';
 
 const main = () => {
     const searchElement = document.querySelector("search-bar");
-    const clubListElement = document.querySelector("club-list");
+    const shelfElement = document.querySelector("movie-shelf");
 
     const onButtonSearchClicked = async () => {
         try{
-            const result = await DataSource.searchClub(searchElement.value);
+            const result = await MovieFinder.searchMovie(searchElement.value);
             renderResult(result);
         } catch (message) {
             fallbackResult(message)
@@ -16,11 +16,11 @@ const main = () => {
     };
 
     const renderResult =  results => {
-        clubListElement.clubs = results;
+        shelfElement.movieList = results;
     };
 
     const fallbackResult = message => {
-        clubListElement.renderError(message);
+        shelfElement.renderError(message);
     };
 
     searchElement.clickEvent = onButtonSearchClicked;
