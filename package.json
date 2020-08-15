@@ -1,14 +1,15 @@
 {
-  "name": "clubfinder",
+  "name": "moviefinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "An app to find a movie from The Movie Database API",
   "main": "app.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "start-dev": "webpack-dev-server --config builder/config/webpack.dev.js --open",
+    "build": "webpack --config builder/config/webpack.prod.js"
   },
-  "author": "dimas_saputra <dimas.maulanads@gmail.com>",
+  "author": "Aditya Firman Ihsan <aditya.fphoenix@gmail.com>",
   "license": "ISC",
+  "repository": "https://github.com/phoenixfin/moviefinder",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
