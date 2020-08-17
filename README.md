@@ -16,4 +16,4 @@ The whole script is bundled using Webpack module.
 3. Rebuild the app, using command
 `npm run build`
 from root directory.
-4. Open the `index.html` to view the output page.
+4. Open directly the `index.html` in root directory to view the output page or start an htpp server (you can do this using `npm run start-http` or using editor extension) from root directory.
