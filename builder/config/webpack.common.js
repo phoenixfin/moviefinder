@@ -5,7 +5,7 @@ module.exports = {
     entry: "./builder/src/app.js",
     output: {
         path: path.resolve(__dirname, "..", ".."),
-        filename: "bundle/app.js"
+        filename: "script_bundle/app.js"
     },
     module: {
         rules: [
